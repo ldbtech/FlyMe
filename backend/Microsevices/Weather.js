@@ -23,3 +23,12 @@ const getWeatherData = (cityName) => {
                 resolve(weatherData);
             })
             .catch(error => {
+                console.error('Error fetching current weather:', error);
+                reject(error);
+            });
+    });
+};
+
+module.exports = {
+    getWeatherData
+};
